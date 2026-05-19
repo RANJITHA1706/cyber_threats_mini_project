@@ -1,0 +1,19 @@
+
+WiFi: moto edge 60 pro_4623
+Time: Sun Mar 22 2026 12:30:37 GMT+0530 (India Standard Time)
+Risk: LOW
+Reason: 
+
+=== FULL OUTPUT ===
+[+] Running Nmap...
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-22 12:30 +0530
+Nmap scan report for 10.75.202.131
+Host is up (0.0064s latency).
+Not shown: 99 closed tcp ports (reset)
+PORT   STATE SERVICE
+53/tcp open  domain
+
+Nmap done: 256 IP addresses (1 host up) scanned in 2.56 seconds
+\n[+] Running Netdiscover...
+[!] Netdiscover requires root permission (skipped)
+

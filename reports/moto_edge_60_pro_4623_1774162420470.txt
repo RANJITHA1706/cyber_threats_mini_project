@@ -1,0 +1,12 @@
+
+WiFi: moto edge 60 pro_4623
+Time: Sun Mar 22 2026 12:23:40 GMT+0530 (India Standard Time)
+Risk: LOW
+Reason: 
+
+=== FULL OUTPUT ===
+
+[+] Running Netdiscover...
+[+] Running Nmap...
+You must be root to run this.
+

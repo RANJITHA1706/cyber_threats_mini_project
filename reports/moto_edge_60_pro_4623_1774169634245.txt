@@ -1,0 +1,24 @@
+
+WiFi: moto edge 60 pro_4623
+Time: Sun Mar 22 2026 14:23:54 GMT+0530 (India Standard Time)
+Risk: LOW
+Reason: 
+
+=== FULL OUTPUT ===
+[+] Running Nmap...
+Starting Nmap 7.98 ( https://nmap.org ) at 2026-03-22 14:23 +0530
+Nmap scan report for LAPTOP-B474OF3K.mshome.net (172.21.192.1)
+Host is up (0.00091s latency).
+All 100 scanned ports on LAPTOP-B474OF3K.mshome.net (172.21.192.1) are in ignored states.
+Not shown: 100 filtered tcp ports (no-response)
+MAC Address: 00:15:5D:A6:85:56 (Microsoft)
+
+Nmap scan report for 172.21.192.51
+Host is up.
+All 100 scanned ports on 172.21.192.51 are in ignored states.
+Not shown: 100 filtered tcp ports (no-response)
+
+Nmap done: 256 IP addresses (2 hosts up) scanned in 2.02 seconds
+\n[+] Running Netdiscover...
+[!] Netdiscover requires root permission (skipped)
+

@@ -5,7 +5,7 @@ const OpenAI = require("openai").default
 
 // 🔥 GROQ SETUP
 const openai = new OpenAI({
-  apiKey: "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",
+  apiKey: "secret api key",
   baseURL: "https://api.groq.com/openai/v1"
 })
 

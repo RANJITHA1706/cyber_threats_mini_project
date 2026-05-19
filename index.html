@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Cyber Threat Monitor</title>
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family: "Segoe UI", sans-serif;
+      background: #0f172a;
+      color: white;
+    }
+
+    .header {
+      background: #020617;
+      padding: 15px;
+      font-size: 22px;
+      font-weight: bold;
+      text-align: center;
+      border-bottom: 1px solid #1e293b;
+    }
+
+    .container {
+      padding: 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .card {
+      background: #1e293b;
+      padding: 20px;
+      border-radius: 10px;
+      margin-bottom: 20px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.4);
+    }
+
+    .wifi {
+      font-size: 20px;
+      font-weight: bold;
+    }
+
+    .status {
+      margin-top: 10px;
+      font-size: 16px;
+      color: #38bdf8;
+    }
+
+    .risk-high {
+      color: #ef4444;
+    }
+
+    .risk-medium {
+      color: #f59e0b;
+    }
+
+    .risk-low {
+      color: #22c55e;
+    }
+
+    .logs {
+      max-height: 200px;
+      overflow-y: auto;
+      font-size: 13px;
+      background: #020617;
+      padding: 10px;
+      border-radius: 6px;
+    }
+
+    .terminal {
+      background: black;
+      color: #00ff00;
+      font-family: monospace;
+      height: 250px;
+      overflow: auto;
+      padding: 10px;
+      border-radius: 6px;
+      border: 1px solid #00ff00;
+    }
+
+    button {
+      padding: 10px 15px;
+      border: none;
+      border-radius: 6px;
+      background: #3b82f6;
+      color: white;
+      cursor: pointer;
+      margin-right: 10px;
+    }
+
+    button:hover {
+      background: #2563eb;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 10px;
+    }
+
+    h3 {
+      margin-top: 0;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="header">🛡 Cyber Threat Monitor</div>
+  <div style="position:absolute; top:15px; right:20px;">
+  <label style="color:white;">
+    ⚠️ Risk Test Mode
+    <input type="checkbox" id="riskToggle" onchange="toggleRiskMode()" />
+  </label>
+</div>
+
+  <div class="container">
+
+    <!-- WIFI STATUS -->
+    <div class="card">
+      <div id="wifi" class="wifi">WiFi: Detecting...</div>
+      <div id="status" class="status">Status: Monitoring</div>
+    </div>
+
+    <!-- SCAN STATUS -->
+    <div class="card">
+      <h3>🔍 Scan Status</h3>
+      <p id="scan">Waiting for scan...</p>
+    </div>
+
+    <!-- TERMINAL -->
+    <div class="card">
+      <h3>💻 Live Kali Terminal</h3>
+      <div id="terminal" class="terminal">
+        Waiting for scan...
+      </div>
+    </div>
+
+    <!-- LOGS -->
+    <div class="card">
+      <h3>📜 Logs</h3>
+      <div id="logs" class="logs">No logs yet...</div>
+    </div>
+
+    <!-- BUTTONS -->
+    <div class="card">
+      <div class="button-group">
+        <button onclick="manualScan()">▶ Run Scan</button>
+        <button onclick="clearLogs()">🗑 Clear Logs</button>
+      </div>
+    </div>
+
+    <!-- REPORT PLACEHOLDER (NEXT STEP) -->
+    <div class="card">
+      <h3>📁 Reports</h3>
+      <p>Saved reports will appear here (next step)</p>
+    </div>
+
+  </div>
+
+  <script src="renderer.js"></script>
+  <!-- AI RESULT -->
+<div class="card">
+  <h3>🤖 AI Analysis</h3>
+  <div id="ai">Waiting for AI analysis...</div>
+</div>
+<!-- 📊 GRAPH -->
+<div class="card">
+  <h3>📊 Network Graph</h3>
+  <canvas id="chart"></canvas>
+</div>
+
+<!-- 🖥 DEVICE TABLE -->
+<div class="card">
+  <h3>🖥 Connected Devices</h3>
+  <table id="deviceTable" style="width:100%; color:white;">
+    <thead>
+      <tr>
+        <th>IP Address</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+</div>
+
+
+
+</body>
+</html>
